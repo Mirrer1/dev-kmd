@@ -5,6 +5,8 @@ export interface Theme {
     button: string;
     bgDark: string;
     bgLight: string;
+    success: string;
+    warning: string;
   };
   fontSize: {
     xl: string;

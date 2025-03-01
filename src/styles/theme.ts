@@ -7,6 +7,8 @@ const theme: Theme = {
     button: '#18A0FB',
     bgDark: '#999999',
     bgLight: '#D9D9D9',
+    success: '#00C300',
+    warning: '#FF6633',
   },
   fontSize: {
     xl: '48px',
