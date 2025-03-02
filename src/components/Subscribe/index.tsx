@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { getBg, fetchAndCacheBg } from '@constants/unsplashBg';
+import { getBg, fetchAndCacheBg } from '@utils/unsplashBg';
 import { SubscribeContent, SubscribeForm, SubscribeSection } from './style';
 
 const Subscribe = () => {

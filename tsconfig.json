@@ -7,7 +7,7 @@
       "@/*": ["*"],
       "@components/*": ["components/*"],
       "@styles/*": ["styles/*"],
-      "@constants/*": ["constants/*"]
+      "@utils/*": ["utils/*"]
     }
   }
 }

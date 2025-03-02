@@ -1,4 +1,4 @@
-import shuffledUsers from '@constants/shuffledUsers';
+import shuffledUsers from '@utils/shuffledUsers';
 import { IUser } from './type';
 import { UserHeader, UserList, UserSection } from './style';
 

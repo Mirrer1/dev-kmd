@@ -47,10 +47,11 @@ export const SubscribeForm = styled.div<{ $error: null | boolean }>`
 
   & > label {
     height: 19px;
-    font-family: Exo2;
+    font-family: 'Exo 2';
     color: ${({ theme }) => theme.colors.white};
     font-size: ${({ theme }) => theme.fontSize.base};
     font-weight: bold;
+    line-height: normal;
     letter-spacing: -0.24px;
     margin: 0 146px 16px 150px;
   }
@@ -72,7 +73,7 @@ export const SubscribeForm = styled.div<{ $error: null | boolean }>`
 
     & > input {
       flex: 1;
-      font-family: Exo2;
+      font-family: 'Exo 2';
       font-size: ${({ theme }) => theme.fontSize.base};
       background: transparent;
       border: none;
@@ -94,7 +95,7 @@ export const SubscribeForm = styled.div<{ $error: null | boolean }>`
       position: absolute;
       left: 15px;
       bottom: -30px;
-      font-family: Exo2;
+      font-family: 'Exo 2';
       font-size: ${({ theme }) => theme.fontSize.base};
       color: ${({ theme }) => theme.colors.warning};
       opacity: ${props => (props.$error ? 1 : 0)};
