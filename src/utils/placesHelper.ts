@@ -38,9 +38,11 @@ const places = [
 ];
 
 export const filterPlaces = (category: string, year: number | null) => {
-  return places.filter(place => {
-    const matchesCategory = category === 'All' || place.category === category;
-    const matchesYear = year === null || place.year <= year;
-    return matchesCategory && matchesYear;
-  });
+  return places
+    .filter(place => {
+      const matchesCategory = category === 'All' || place.category === category;
+      const matchesYear = year === null || place.year <= year;
+      return matchesCategory && matchesYear;
+    })
+    .sort((a, b) => a.year - b.year);
 };

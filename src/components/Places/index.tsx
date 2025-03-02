@@ -22,12 +22,10 @@ const Places = () => {
 
   const handleCategoryClick = (category: string) => {
     setSelectedCategory(category);
-    console.log('Selected Category:', category);
   };
 
   const handleYearClick = (year: number) => {
     setSelectedYear(prevYear => (prevYear === year && year === 1000 ? null : year));
-    console.log('Selected Year:', year);
   };
 
   return (
