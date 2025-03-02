@@ -37,6 +37,13 @@ const places = [
   },
 ];
 
+/**
+ * 특정 카테고리와 연도를 기준으로 장소 목록을 필터링하고 정렬하는 함수
+ *
+ * @param {string} category - 필터링할 카테고리
+ * @param {number | null} year - 지정한 연도 이하의 장소만 필터링
+ * @returns {Array} 필터링 및 정렬된 장소 목록
+ */
 export const filterPlaces = (category: string, year: number | null) => {
   return places
     .filter(place => {

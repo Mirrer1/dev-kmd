@@ -22,8 +22,13 @@ const userData = [
   },
 ];
 
+/**
+ * 배열의 요소들을 랜덤하게 섞는 함수
+ *
+ * @param {T[]} array - 섞을 배열
+ * @returns {T[]} - 랜덤하게 섞인 새로운 배열
+ */
 const shuffleArray = <T>(array: T[]): T[] => [...array].sort(() => Math.random() - 0.5);
-
 const shuffledUsers = shuffleArray(userData);
 
 export default shuffledUsers;
