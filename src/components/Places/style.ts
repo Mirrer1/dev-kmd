@@ -1,7 +1,9 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+
 import { HoverStyle } from '@styles/hover';
 
-export const PlacesSection = styled.section`
+export const PlacesSection = styled(motion.section)`
   padding: 120px 80px;
 
   & > header {
@@ -100,7 +102,7 @@ export const PlacesList = styled.div`
   }
 `;
 
-export const PlaceCard = styled.article`
+export const PlaceCard = styled(motion.article)`
   width: 400px;
   height: 415px;
   padding: 15px 20px 23px;

@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 import { HoverStyle } from '@styles/hover';
 
-export const UserSection = styled.section`
+export const UserSection = styled(motion.section)`
   padding: 120px 80px 110px;
 `;
 

@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 import { HoverStyle } from '@styles/hover';
 
-export const SubscribeSection = styled.section<{ $image: string }>`
+export const SubscribeSection = styled(motion.section)<{ $image: string }>`
   height: 740px;
   background: ${({ $image }) => ($image ? `url(${$image}) center/cover no-repeat` : 'none')}, rgba(0, 0, 0, 0.5);
   padding: 152px 80px;

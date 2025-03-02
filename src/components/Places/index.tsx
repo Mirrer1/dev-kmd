@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import { IPlace } from './type';
 import { categories, years, filterPlaces } from '@utils/placesHelper';
+import { slideInFromBottom, slideInFromRight } from '@styles/animation';
 import {
   CategoryFilter,
   CategoryButton,
@@ -30,7 +31,7 @@ const Places = () => {
   };
 
   return (
-    <PlacesSection>
+    <PlacesSection {...slideInFromBottom}>
       <header>Duis tincidunt ut ligula vitae mollis.</header>
 
       <FiltersWrapper>
@@ -66,8 +67,8 @@ const Places = () => {
 
       <PlacesList>
         {filteredPlaces.length > 0 ? (
-          filteredPlaces.map(({ title, year, image, description }: IPlace) => (
-            <PlaceCard key={title}>
+          filteredPlaces.map(({ title, year, image, description }: IPlace, index: number) => (
+            <PlaceCard key={`${selectedCategory}-${selectedYear}-${title}`} {...slideInFromRight(index)}>
               <div>
                 <p>{title}</p>
                 <span>{year}</span>

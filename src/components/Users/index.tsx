@@ -1,10 +1,11 @@
 import shuffledUsers from '@utils/shuffledUsers';
 import { IUser } from './type';
+import { slideInFromBottom } from '@styles/animation';
 import { UserHeader, UserList, UserSection } from './style';
 
 const Users = () => {
   return (
-    <UserSection>
+    <UserSection {...slideInFromBottom}>
       <UserHeader>
         Snap photos and share like
         <br />

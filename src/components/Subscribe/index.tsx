@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { getBg, fetchAndCacheBg } from '@utils/unsplashBg';
+import { slideInFromBottom } from '@styles/animation';
 import { SubscribeContent, SubscribeForm, SubscribeSection } from './style';
 
 const Subscribe = () => {
@@ -34,7 +35,7 @@ const Subscribe = () => {
   }, [bgImage]);
 
   return (
-    <SubscribeSection $image={bgImage}>
+    <SubscribeSection {...slideInFromBottom} $image={bgImage}>
       <SubscribeContent>
         <header>Sed ut perspiciatis unde omnis</header>
         <p>
