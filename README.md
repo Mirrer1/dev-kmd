@@ -2,7 +2,7 @@
 
 <br />
 
-- **URL** : [**https://gallerygrd.com**](https://gallerygrd.com)
+- **URL** : [**https://dev-kmd.vercel.app**](https://dev-kmd.vercel.app)
 
 <br />
 
@@ -42,7 +42,28 @@
 
 ## Key Focus Areas.
 
-### **Seamless UI with Framer Motion**
+
+### **Efficient Data Processing with Utilities**
+
+- **유틸리티 함수**를 활용해 **데이터 처리, 정렬, 캐싱을 최적화하여 성능을 개선하고 코드의 재사용성을 극대화**.
+
+```ts
+// utils/placesHelper.ts
+export const filterPlaces = (category: string, year: number | null) => {
+  return places
+    .filter(place => {
+      const matchesCategory = category === 'All' || place.category === category;
+      const matchesYear = year === null || place.year <= year;
+      return matchesCategory && matchesYear;
+    })
+    .sort((a, b) => a.year - b.year);
+};
+```
+
+ <br />
+
+
+ ### **Seamless UI with Framer Motion**
 
 - **단계적인 애니메이션 적용**으로 **컴포넌트는 자연스럽게 페이드 인되고, Place 카드 리스트는 슬라이드 인 효과로 직관적인 흐름을 제공**.
 
@@ -64,24 +85,7 @@ export const slideInFromRight = (index: number) => ({
 });
 ```
 
- <br />
 
-### **Efficient Data Processing with Utilities**
-
-- **유틸리티 함수**를 활용해 **데이터 처리, 정렬, 캐싱을 최적화하여 성능을 개선하고 코드의 재사용성을 극대화**.
-
-```ts
-// utils/placesHelper.ts
-export const filterPlaces = (category: string, year: number | null) => {
-  return places
-    .filter(place => {
-      const matchesCategory = category === 'All' || place.category === category;
-      const matchesYear = year === null || place.year <= year;
-      return matchesCategory && matchesYear;
-    })
-    .sort((a, b) => a.year - b.year);
-};
-```
 
 <br />
 
@@ -93,7 +97,7 @@ export const filterPlaces = (category: string, year: number | null) => {
 
 - 아래 URL을 통해 접근
 
-> [**https://gallerygrd.com**](https://gallerygrd.com/)
+> [**https://dev-kmd.vercel.app**](https://dev-kmd.vercel.app/)
 
 <br />
 
