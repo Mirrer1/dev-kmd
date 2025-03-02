@@ -35,7 +35,7 @@ const Subscribe = () => {
   }, [bgImage]);
 
   return (
-    <SubscribeSection {...slideInFromBottom} $image={bgImage}>
+    <SubscribeSection {...slideInFromBottom} $image={bgImage || ''}>
       <SubscribeContent>
         <header>Sed ut perspiciatis unde omnis</header>
         <p>

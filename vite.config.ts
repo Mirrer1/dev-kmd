@@ -1,9 +1,11 @@
-import path from 'path';
 import react from '@vitejs/plugin-react';
+import tsconfigPaths from 'vite-tsconfig-paths';
 import { defineConfig } from 'vite';
+import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [
+    tsconfigPaths(),
     react({
       babel: {
         plugins: [
@@ -20,10 +22,10 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
-      '@components': path.resolve(__dirname, 'src/components'),
-      '@styles': path.resolve(__dirname, 'src/styles'),
-      '@utils': path.resolve(__dirname, 'src/utils'),
+      '@': resolve(__dirname, 'src'),
+      '@components': resolve(__dirname, 'src/components'),
+      '@styles': resolve(__dirname, 'src/styles'),
+      '@utils': resolve(__dirname, 'src/utils'),
     },
   },
 });
